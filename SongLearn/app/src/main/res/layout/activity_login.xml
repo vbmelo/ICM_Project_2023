@@ -4,25 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00BCD4"
-    tools:context=".MainActivity">
+    tools:context="Login">
 
     <TextView
-        android:id="@+id/idTitle"
+        android:id="@+id/idTitle2"
         android:layout_width="303dp"
         android:layout_height="83dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="148dp"
         android:fontFamily="@font/roboto_light"
         android:text="SongLearn"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#FFFFFF"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/idEmail"
+        android:id="@+id/idEmail2"
         android:layout_width="277dp"
         android:layout_height="71dp"
         android:layout_marginTop="120dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/idTitle" />
 
     <EditText
-        android:id="@+id/idPassword"
+        android:id="@+id/idPassword2"
         android:layout_width="277dp"
         android:layout_height="71dp"
         android:ems="10"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonLogin2"
         android:layout_width="257dp"
         android:layout_height="52dp"
         android:layout_marginBottom="12dp"
@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonGoogle"
+        android:id="@+id/buttonGoogle2"
         android:layout_width="257dp"
         android:layout_height="52dp"
         android:layout_marginBottom="24dp"
@@ -75,14 +75,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/idSignUpFooter"
+        android:id="@+id/idSignUpFooter2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="300dp"
-        android:text="Already have and account? Login instead"
+        android:layout_marginBottom="260dp"
+        android:text="Already have and account? SignUp instead"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
