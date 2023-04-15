@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "92161672945",
+    "project_id": "songlearn",
+    "storage_bucket": "songlearn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92161672945:android:556afa9c3e6acb5665cb50",
+        "android_client_info": {
+          "package_name": "com.example.songlearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92161672945-hbnbmcqvagebeov3ng22hbienoakc0p2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoQ10LWn5ZJ9dEAw0m1J3yJISibbakY38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92161672945-hbnbmcqvagebeov3ng22hbienoakc0p2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
