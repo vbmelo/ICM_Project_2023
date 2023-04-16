@@ -33,20 +33,24 @@ class MainActivity : AppCompatActivity() {
             val email: String = registerEmail.text.toString()
             val password : String = registerPassword.text.toString()
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Log.d(TAG, "signInWithEmail:success")
-                        val user = auth.currentUser
-                        val intent = Intent(this, Home::class.java)
+                if (task.isSuccessful) {
+                    Log.d(TAG, "signInWithEmail:success")
+                    val user = auth.currentUser
+                    // Check if user is authenticated
+                    if (user != null) {
+                        val intent = Intent(this, VideoListActivity::class.java)
                         startActivity(intent)
-
                     } else {
-                        // If sign in fails, display a message to the user.
-                        Log.w(TAG, "signInWithEmail:failure", task.exception)
-                        Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.makeText(baseContext, "Please verify your email address.",
                             Toast.LENGTH_SHORT).show()
                     }
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    Toast.makeText(baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT).show()
                 }
-
+            }
         }
 
     }
