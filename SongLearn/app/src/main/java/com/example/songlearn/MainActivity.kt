@@ -8,11 +8,13 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.camera.core.ExperimentalGetImage
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
+@ExperimentalGetImage
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     // Check if user is authenticated
                     if (user != null) {
-                        val intent = Intent(this, VideoListActivity::class.java)
+                        val intent = Intent(this, Home::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(baseContext, "Please verify your email address.",

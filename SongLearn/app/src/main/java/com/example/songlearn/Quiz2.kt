@@ -11,27 +11,27 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
-class Quiz : AppCompatActivity() {
+class Quiz2 : AppCompatActivity() {
 
     data class Question(
         val questionText: String,
         val options: List<String>,
         val answerIndex: Int
     )
-    val quizName= "GuitarQuiz"
+    val quizName= "MusicTheoryQuiz"
     var currentQuestionIndex = 0
     var numCorrectAnswers = 0
     val questions = listOf(
-        Question("What are the names of the six strings on a standard guitar, starting from the thinnest string?", listOf("EADGBE", "EBGDFA", "GBDFAE", "EDAGBF"), 0),
-        Question("What is the name of the symbol used to indicate a sharp note in music notation?", listOf("♯", "♭", "°", "∆"), 0),
-        Question("What is the name of the scale that is commonly used in rock and blues music, and is often referred to as the 'pentatonic scale'?", listOf("Minor pentatonic", "Major pentatonic", "Melodic minor", "Harmonic minor"), 0),
-        Question("What is the name of the part of the guitar that is used to adjust the tension of the strings and therefore change the pitch of the notes played?", listOf("Bridge", "Headstock", "Fretboard", "Pickup"), 1),
-        Question("What is the name of the chord that consists of the notes C, E, and G?", listOf("C major", "C minor", "C diminished", "C augmented"), 0),
-        Question("What is the name of the technique used to play two notes on adjacent strings at the same fret, commonly used in rock and metal music?", listOf("Power chord", "Hammer-on", "Pull-off", "Slide"), 1),
-        Question("What is the name of the musical interval between the notes C and E?", listOf("Major third", "Minor third", "Perfect fifth", "Perfect fourth"), 0),
-        Question("What is the name of the type of scale that consists of seven different notes and is commonly used in Western classical music?", listOf("Major scale", "Minor scale", "Pentatonic scale", "Blues scale"), 0),
-        Question("What is the name of the part of the guitar that is used to mute or dampen the strings, and is commonly used in funk and rhythm guitar playing?", listOf("Fretting hand", "Picking hand", "Strumming hand", "Left hand"), 3),
-        Question("What is the name of the chord that consists of the notes C, E♭, and G?", listOf("C minor", "C major", "C diminished", "C augmented"), 0)
+        Question("What does the term 'piano' mean in music?", listOf("Soft", "Loud", "Fast", "Slow"), 0),
+        Question("What is the term used for a musical note that is sustained or held?", listOf("Tie", "Rest", "Fermata", "Staccato"), 2),
+        Question("What is the term for a musical composition for two voices or instruments?", listOf("Solo", "Duet", "Trio", "Quartet"), 1),
+        Question("What is a chord that is made up of three notes called?", listOf("Major chord", "Minor chord", "Triad", "Seventh chord"), 2),
+        Question("What is the term for a gradual increase in volume?", listOf("Decrescendo", "Crescendo", "Diminuendo", "Rallentando"), 1),
+        Question("What is the term for the pattern of beats in a musical composition?", listOf("Melody", "Harmony", "Rhythm", "Texture"), 2),
+        Question("What is the term for a musical composition for three voices or instruments?", listOf("Trio", "Quartet", "Quintet", "Sextet"), 0),
+        Question("What is the term for the musical distance between two notes?", listOf("Chord", "Interval", "Scale", "Key"), 1),
+        Question("What is the term for a musical composition for four voices or instruments?", listOf("Quartet", "Quintet", "Sextet", "Octet"), 0),
+        Question("What is the term for the highest female singing voice?", listOf("Alto", "Soprano", "Tenor", "Baritone"), 1)
     )
 
 
@@ -48,13 +48,13 @@ class Quiz : AppCompatActivity() {
         val option4Button = findViewById<Button>(R.id.option4)
         fun updateQuestion() {
             if(currentQuestionIndex != 10){
-            val currentQuestion = questions[currentQuestionIndex]
-            questionTextView.text = currentQuestion.questionText
-            option1Button.text = currentQuestion.options[0]
-            option2Button.text = currentQuestion.options[1]
-            option3Button.text = currentQuestion.options[2]
-            option4Button.text = currentQuestion.options[3]
-        }}
+                val currentQuestion = questions[currentQuestionIndex]
+                questionTextView.text = currentQuestion.questionText
+                option1Button.text = currentQuestion.options[0]
+                option2Button.text = currentQuestion.options[1]
+                option3Button.text = currentQuestion.options[2]
+                option4Button.text = currentQuestion.options[3]
+            }}
         fun showResults() {
             // Hide answer buttons and show result message
             option1Button.visibility = View.GONE
@@ -72,6 +72,7 @@ class Quiz : AppCompatActivity() {
                 val userScore = score
 
                 // Create a new child node in the database with the user's information
+
                 val userRef = database.child("users").child(userId).child(quizName)
                 userRef.child("score").setValue(userScore)
             }

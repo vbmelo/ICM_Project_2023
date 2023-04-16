@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
-
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_transform"
-            android:icon="@drawable/ic_camera_black_24dp"
-            android:title="@string/menu_transform" />
-        <item
-            android:id="@+id/nav_reflow"
-            android:icon="@drawable/ic_gallery_black_24dp"
-            android:title="@string/menu_reflow" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_slideshow_black_24dp"
-            android:title="@string/menu_slideshow" />
-    </group>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Home"
+android:id ="@+id/home"
+    android:icon="@drawable/home"/>
+    <item android:title="Quiz"
+        android:id ="@+id/quiz"
+        android:icon="@drawable/quiz"/>
+    <item android:title="Diapason"
+        android:id ="@+id/diapason"
+        android:icon="@drawable/diapason"/>
+    <item android:title="Class"
+        android:id ="@+id/classes"
+        android:icon="@drawable/baseline_class_24"/>
+    <item android:title="Upload Video"
+        android:id ="@+id/upload"
+        android:icon="@drawable/baseline_cloud_upload_24"/>
 </menu>

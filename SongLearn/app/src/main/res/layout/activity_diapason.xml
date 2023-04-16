@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/background"
     tools:context=".DiapasonActivity">
 
     <Button
         android:id="@+id/diapason_button"
-        android:layout_width="209dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="196dp"
+        android:layout_width="223dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="244dp"
         android:text="Play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +21,13 @@
         android:id="@+id/stopDiapason"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="376dp"
         android:text="Stop"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="368dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diapason_button"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
