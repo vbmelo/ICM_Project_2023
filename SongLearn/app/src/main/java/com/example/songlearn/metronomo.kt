@@ -92,7 +92,7 @@ class metronomo : AppCompatActivity() {
     }
 
     private fun playSound() {
-        soundPool.play(soundId, 1f, 1f, 0, 0, 1f)
+        soundPool.play(soundId, 1f, 1f, 1, 1, 1f)
     }
 
     override fun onDestroy() {
