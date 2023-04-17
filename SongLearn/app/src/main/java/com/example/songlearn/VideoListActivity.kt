@@ -34,7 +34,8 @@ class VideoListActivity : AppCompatActivity() {
 
         storage = Firebase.storage
         storageRef = storage.reference
-        videosRef = storageRef.child("users").child(currentUser.uid).child("videos")
+
+        videosRef = storageRef.child("videos")
 
         videoList = findViewById(R.id.video_list)
 

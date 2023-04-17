@@ -22,7 +22,7 @@ class DiapasonActivity : AppCompatActivity() {
         }
 
         diapason_stop_button.setOnClickListener{
-            mediaPlayer.stop()
+            mediaPlayer.pause()
         }
     }
 

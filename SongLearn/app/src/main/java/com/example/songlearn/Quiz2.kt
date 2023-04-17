@@ -1,5 +1,6 @@
 package com.example.songlearn
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -39,13 +40,17 @@ class Quiz2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
         var  database: DatabaseReference;
-        database = FirebaseDatabase.getInstance("https://songlearn-default-rtdb.europe-west1.firebasedatabase.app/").getReference("quiz_results")
+        database = FirebaseDatabase.getInstance("https://songlearn-default-rtdb.europe-west1.firebasedatabase.app/").getReference("users")
         val mAuth = FirebaseAuth.getInstance()
         val questionTextView = findViewById<TextView>(R.id.questionText)
         val option1Button = findViewById<Button>(R.id.option1)
         val option2Button = findViewById<Button>(R.id.option2)
         val option3Button = findViewById<Button>(R.id.option3)
         val option4Button = findViewById<Button>(R.id.option4)
+        val nextQuiz = findViewById<Button>(R.id.nextQuiz)
+
+        nextQuiz.visibility = View.GONE
+
         fun updateQuestion() {
             if(currentQuestionIndex != 10){
                 val currentQuestion = questions[currentQuestionIndex]
@@ -61,6 +66,14 @@ class Quiz2 : AppCompatActivity() {
             option2Button.visibility = View.GONE
             option3Button.visibility = View.GONE
             option4Button.visibility = View.GONE
+            nextQuiz.visibility = View.VISIBLE
+
+            nextQuiz.setOnClickListener{
+                val intent = Intent(this, Home::class.java)
+                startActivity(intent)
+                finish()
+            }
+            nextQuiz.text = "Home"
             var numQuestions = questions.size;
             val score = numCorrectAnswers * 100 / numQuestions
             questionTextView.text = "You got $numCorrectAnswers out of $numQuestions!\n\nYour score: $score%"
@@ -72,8 +85,7 @@ class Quiz2 : AppCompatActivity() {
                 val userScore = score
 
                 // Create a new child node in the database with the user's information
-
-                val userRef = database.child("users").child(userId).child(quizName)
+                val userRef = database.child(userId).child("quiz_results").child(quizName)
                 userRef.child("score").setValue(userScore)
             }
         }

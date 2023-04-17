@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -35,7 +36,7 @@ class VideoUpload : AppCompatActivity() {
 
         val storage: FirebaseStorage = Firebase.storage
         var storageRef = storage.reference
-        var videosRef = storageRef.child("users").child(currentUser!!.uid).child("videos")
+        var videosRef = storageRef.child("videos")
         val selectVideoButton: Button = findViewById(R.id.selectVideo)
         val uploadVideoButton : Button = findViewById(R.id.UploadVideo)
 
@@ -49,7 +50,8 @@ class VideoUpload : AppCompatActivity() {
             val currentUser: FirebaseUser? = Firebase.auth.currentUser
             if (currentUser != null) {
             if (selectedVideoUri != null) {
-                val videoName = selectedVideoUri?.lastPathSegment
+                val textInputNameVideo: EditText = findViewById(R.id.nameVideoInput)
+                val videoName  =  textInputNameVideo.text.toString()
                 val videoRef = videosRef.child(videoName!!)
                 val uploadTask = videoRef.putFile(selectedVideoUri!!)
                 uploadTask.addOnSuccessListener {

@@ -53,6 +53,10 @@ dependencies {
     implementation 'com.google.mlkit:pose-detection-common:17.0.0'
     implementation 'com.google.mlkit:pose-detection:17.0.0'
     implementation 'androidx.camera:camera-lifecycle:1.0.2'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+
     implementation 'androidx.camera:camera-core:1.0.2'
     testImplementation 'junit:junit:4.13.2'
     implementation platform('com.google.firebase:firebase-bom:31.5.0')
