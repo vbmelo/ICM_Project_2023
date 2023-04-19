@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@drawable/background"
     tools:context=".Quiz">
 
@@ -13,7 +12,6 @@
         android:layout_width="409dp"
         android:layout_height="52dp"
         android:backgroundTint="#009688"
-
         android:layout_marginBottom="1dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/option2"
@@ -26,7 +24,6 @@
         android:layout_width="409dp"
         android:layout_height="53dp"
         android:backgroundTint="#009688"
-
         android:layout_marginBottom="4dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/option3"
@@ -39,7 +36,6 @@
         android:layout_width="409dp"
         android:layout_height="49dp"
         android:backgroundTint="#009688"
-
         android:layout_marginBottom="176dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,9 +46,8 @@
     <Button
         android:id="@+id/option3"
         android:layout_width="409dp"
-        android:backgroundTint="#009688"
-
         android:layout_height="52dp"
+        android:backgroundTint="#009688"
         android:layout_marginBottom="4dp"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/option4"
@@ -84,27 +79,5 @@
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="option1,option2,option4,option3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <Button
-        android:id="@+id/nextQuiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginEnd="154dp"
-
-        android:backgroundTint="#009688"
-        android:text="Next Quiz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width
+    />
