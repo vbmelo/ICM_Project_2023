@@ -24,4 +24,10 @@
         item
     </string>
     <string name="Play" />
+    <string name="e">E</string>
+    <string name="d">D</string>
+    <string name="g">G</string>
+    <string name="e2">E</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
 </resources>

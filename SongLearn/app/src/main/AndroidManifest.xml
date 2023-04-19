@@ -8,7 +8,9 @@
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
 
     <application
         android:fullBackupContent="@xml/backup_rules"
