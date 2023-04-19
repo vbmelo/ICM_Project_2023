@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "92161672945",
+    "firebase_url": "https://songlearn-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "songlearn",
     "storage_bucket": "songlearn.appspot.com"
   },
@@ -14,7 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "92161672945-hbnbmcqvagebeov3ng22hbienoakc0p2.apps.googleusercontent.com",
+          "client_id": "92161672945-9ivjrq7ffeqphgjntif7ve02c5rernt0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.songlearn",
+            "certificate_hash": "bdbffa5e463ab5109314c2e539ee78e17a9ad1f0"
+          }
+        },
+        {
+          "client_id": "92161672945-f6gul4v84ueuf21ljim5nocemj8b90l1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,7 +36,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "92161672945-hbnbmcqvagebeov3ng22hbienoakc0p2.apps.googleusercontent.com",
+              "client_id": "92161672945-f6gul4v84ueuf21ljim5nocemj8b90l1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
